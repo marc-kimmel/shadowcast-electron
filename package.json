@@ -10,7 +10,14 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make --arch=x64,arm64"
+    "make": "electron-forge make --arch=x64,arm64",
+    "build": "electron-builder"
+  },
+    "build": {
+    "appId": "com.nicokimmel.shadowcast",
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "author": "",
   "license": "GPL-3.0",
@@ -18,6 +25,7 @@
     "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
-    "electron": "^27.0.2"
+    "electron": "^27.0.2",
+    "electron-builder": "^25.1.8"
   }
 }
